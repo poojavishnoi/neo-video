@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster+Two:ital@1&family=Montserrat:wght@500&family=Roboto:wght@300&family=Sacramento&family=Shadows+Into+Light&display=swap');
+.center_img{
+  object-fit: cover;
+  position: relative;
+  margin-left: 50%;
+  width: 50%;
+}
+
+.splide-slide{
+  padding: 0 5%;
+}
+
+ .discover_btn{
+  font-family: 'Shadows Into Light', cursive;
+   margin-top: 2rem;
+   font-size: 1.2rem;
+   cursor: pointer;
+   font-weight: bolder;
+}
+
+.home_container{
+  margin: 1% 15%;
+}
+
+.home_center_section{
+  background-color: var(--center-background);
+}
+
+.video_card{
+  width: fit-content;
+  text-align: left;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.explore_container{
+  margin-top: 5rem;
+}
+
+.video_thumbnail{
+  width: 100%;
+  object-fit: cover;
+}
+
+.explore_main_container{
+  display: grid;
+  column-gap: 3rem;
+  grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)) ;
+}
+.overlap_text{
+  position: absolute;
+  top: 25%;
+  left: 17%;
+  font-size: 2rem;
+  color: var(--white-color);
+  width: 30%;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.watchlater_icon, .playlist_icon{
+  color: var(--white-color);
+  position: absolute;
+}
+
+.watchlater_icon:hover, .playlist_icon:hover{
+  transform: scale(1.2);
+  transition: 0.2s ease;
+}
+
+.watchlater_icon{
+  top: 3%;
+  right: 3%;
+}
+
+.playlist_icon{
+ top: 13%;
+ right: 1%;
+}
+
+.play_icon{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.video_card:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
