@@ -3,7 +3,7 @@ import React from 'react';
 import '../style/footer.css'
 import {AiFillGithub,AiFillTwitterCircle,AiFillLinkedin} from 'react-icons/ai'
 
-function Footer() {
+export function Footer() {
   return (
 
     <div className="footer_container">
@@ -28,4 +28,3 @@ function Footer() {
     </div>  )
 }
 
-export default Footer

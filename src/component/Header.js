@@ -2,7 +2,7 @@ import "../style/header.css";
 import { Link } from "react-router-dom";
 import {BiSearch,BsClockHistory,AiOutlineUser,AiOutlineLike,MdWatchLater,CgPlayList} from './'
 
-function Header() {
+export function Header() {
   return (
     <div className="navigation_main_container">
       <div className="nav_section">
@@ -86,4 +86,3 @@ function Header() {
   );
 }
 
-export default Header;
