@@ -30,7 +30,7 @@ function Home() {
         <img
           className="center_img"
           src="https://yt3.ggpht.com/P1QnEX53rhYHhAHYrrM75hJcluhBv166t3y2J6suDdze9dRwpPDVVCmsPBigTTJLcf0RgR301MBJ=s576"
-          alt="center image"
+          alt="center_image"
         />
         <div className="overlap_text">
           <h1>Indian Indie</h1>
