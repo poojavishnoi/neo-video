@@ -5,7 +5,7 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { makeServer } from "./server";
 import { LikeProvider } from "./context/like-context";
-
+import { WatchLaterProvider } from "./context/watchlater-context";
 // Call make Server
 makeServer();
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -14,7 +14,9 @@ root.render(
   <React.StrictMode>
     <Router>
       <LikeProvider>
-        <App />
+        <WatchLaterProvider>
+          <App />
+        </WatchLaterProvider>
       </LikeProvider>
     </Router>
     ,
