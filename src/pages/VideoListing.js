@@ -1,9 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "../style/videolisting.css";
-import VideoCard from "../component/VideoCard";
+import { VideoCard } from "../component/";
 
-function VideoListing() {
+export function VideoListing() {
   const [videoList, setVideoList] = useState([]);
 
   useEffect(() => {
@@ -22,5 +22,3 @@ function VideoListing() {
     </div>
   );
 }
-
-export default VideoListing;

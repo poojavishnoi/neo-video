@@ -7,12 +7,13 @@ import { makeServer } from "./server";
 
 // Call make Server
 makeServer();
-const root = ReactDOM.createRoot(document.getElementById("root"))
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <Router>
       <App />
-    </Router>,
+    </Router>
+    ,
   </React.StrictMode>
 );

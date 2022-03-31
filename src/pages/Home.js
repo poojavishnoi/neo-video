@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SplideSlide, Splide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
-import VideoCard from "../component/VideoCard";
+import { VideoCard } from "../component/";
 import { getAcoustic, getIndie, getInstru } from "../utils";
 
-function Home() {
+export function Home() {
   const [acousticList, setAcousticList] = useState([]);
   const [indieList, setIndieList] = useState([]);
   const [instruList, setInstruList] = useState([]);
@@ -134,5 +134,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

@@ -1,6 +1,13 @@
 import "../style/header.css";
 import { Link } from "react-router-dom";
-import {BiSearch,BsClockHistory,AiOutlineUser,AiOutlineLike,MdWatchLater,CgPlayList} from './'
+import {
+  BiSearch,
+  BsClockHistory,
+  AiOutlineUser,
+  AiOutlineLike,
+  MdWatchLater,
+  CgPlayList,
+} from "./";
 
 export function Header() {
   return (
@@ -22,7 +29,6 @@ export function Header() {
         <div className="brand_title">
           <Link to="/">NeoDev</Link>
         </div>
-       
       </div>
 
       <div className="nav_section">
@@ -32,11 +38,14 @@ export function Header() {
               <BiSearch className="search_icon" />
             </Link>
           </span>
-          <input className="search_input" type="text" placeholder="Type to search" />
+          <input
+            className="search_input"
+            type="text"
+            placeholder="Type to search"
+          />
         </div>
         <div className="nav_icons_container ">
-
-        <div className="nav_icon">
+          <div className="nav_icon">
             <Link className="nav_icon badge" to="/likedvideos">
               <span>
                 <AiOutlineLike size="30" />
@@ -44,7 +53,7 @@ export function Header() {
               <span className="nav_icon_name">Liked Videos</span>
             </Link>
           </div>
-        <div className="nav_icon">
+          <div className="nav_icon">
             <Link className="nav_icon badge" to="/watchlater">
               <span>
                 <MdWatchLater size="30" />
@@ -52,7 +61,7 @@ export function Header() {
               <span className="nav_icon_name">Watch Later</span>
             </Link>
           </div>
-       
+
           <div className="nav_icon">
             <Link className="nav_icon badge" to="/playlist">
               <span>
@@ -85,4 +94,3 @@ export function Header() {
     </div>
   );
 }
-
