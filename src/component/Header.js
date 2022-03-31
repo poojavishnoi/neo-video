@@ -5,11 +5,16 @@ import {
   BsClockHistory,
   AiOutlineUser,
   AiOutlineLike,
-  MdWatchLater,
+  MdOutlineWatchLater,
   CgPlayList,
 } from "./";
+import { useLike } from "../context/like-context";
+import { useWatchLater } from "../context/watchlater-context";
 
 export function Header() {
+  const { likeCount } = useLike();
+  const { watchCount } = useWatchLater();
+
   return (
     <div className="navigation_main_container">
       <div className="nav_section">
@@ -48,7 +53,8 @@ export function Header() {
           <div className="nav_icon">
             <Link className="nav_icon badge" to="/likedvideos">
               <span>
-                <AiOutlineLike size="30" />
+                <AiOutlineLike className="icon" size="30" />
+                <span className="icon_badge">{likeCount}</span>
               </span>
               <span className="nav_icon_name">Liked Videos</span>
             </Link>
@@ -56,7 +62,8 @@ export function Header() {
           <div className="nav_icon">
             <Link className="nav_icon badge" to="/watchlater">
               <span>
-                <MdWatchLater size="30" />
+                <MdOutlineWatchLater size="30" />
+                <span className="icon_badge">{watchCount}</span>
               </span>
               <span className="nav_icon_name">Watch Later</span>
             </Link>
