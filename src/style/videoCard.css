@@ -1,0 +1,50 @@
+.video_thumbnail{
+  width: 100%;
+  object-fit: cover;
+}
+
+.watchlater_icon, .playlist_icon{
+  color: var(--white-color);
+  position: absolute;
+}
+
+.watchlater_icon:hover, .playlist_icon:hover{
+  transform: scale(1.2);
+  transition: 0.2s ease;
+}
+
+.watchlater_icon{
+  top: 3%;
+  right: 3%;
+}
+
+.playlist_icon{
+ top: 15%;
+ right: 2%;
+}
+
+.play_icon{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.video_card:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.video_card{
+  width: fit-content;
+  text-align: left;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 2rem;
+  position: relative;
+}
+

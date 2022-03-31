@@ -1,9 +1,8 @@
 import "./App.css";
-import { Header } from "./component/";
-import { Footer } from "./component/";
+import { Header, Footer } from "./component/";
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages/";
-import { VideoListing } from "./pages/";
+import { Home, VideoListing, Like} from "./pages/";
+
 function App() {
   return (
     <div className="App">
@@ -11,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/videoList" element={<VideoListing />} />
+        <Route path="/likedvideos" element={<Like />} />
       </Routes>
       <Footer />
     </div>
