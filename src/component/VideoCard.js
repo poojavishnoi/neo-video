@@ -1,6 +1,6 @@
 import React from 'react'
 import {FaPlay} from 'react-icons/fa';
-import {MdWatchLater, CgPlayList} from './'
+import {MdWatchLater, BiLike} from './'
 
 function VideoCard({data}) {
   return (
@@ -14,7 +14,7 @@ function VideoCard({data}) {
     <p>views {data.views}</p>
     <FaPlay className="play_icon" />
     <MdWatchLater className="watchlater_icon" size="25"/>
-    <CgPlayList className="playlist_icon" size="35"/>
+    <BiLike className="playlist_icon" size="30"/>
 
   </div>
   )
