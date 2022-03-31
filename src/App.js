@@ -1,8 +1,7 @@
 import "./App.css";
-import { Header } from "./component/";
-import { Footer } from "./component/";
+import { Header, Footer } from "./component/";
 import { Route, Routes } from "react-router-dom";
-import { Home, VideoListing, Like } from "./pages/";
+import { Home, VideoListing, Like} from "./pages/";
 
 function App() {
   return (

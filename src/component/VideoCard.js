@@ -4,8 +4,8 @@ import { useLike } from "../context/like-context";
 import { MdWatchLater, BiLike, AiFillLike } from "./";
 import "../style/videoCard.css";
 
-export function VideoCard({ data, liked }) {
-  const { likeList, likeDispatch } = useLike();
+export function VideoCard({ liked,data }) {
+  const { likeDispatch } = useLike();
   const [likedStatus, setLikedStatus] = useState(liked);
 
   return (
