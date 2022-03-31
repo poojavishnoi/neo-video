@@ -1,8 +1,13 @@
-import React from "react";
+import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
-import { MdWatchLater, BiLike } from "./";
+import { useLike } from "../context/like-context";
+import { MdWatchLater, BiLike, AiFillLike } from "./";
+import "../style/videoCard.css";
 
-export function VideoCard({ data }) {
+export function VideoCard({ data, liked }) {
+  const { likeList, likeDispatch } = useLike();
+  const [likedStatus, setLikedStatus] = useState(liked);
+
   return (
     <div className="video_card">
       <img
@@ -14,7 +19,25 @@ export function VideoCard({ data }) {
       <p>views {data.views}</p>
       <FaPlay className="play_icon" />
       <MdWatchLater className="watchlater_icon" size="25" />
-      <BiLike className="playlist_icon" size="30" />
+      {likedStatus ? (
+        <AiFillLike
+          className="playlist_icon"
+          size="30"
+          onClick={() => {
+            setLikedStatus(liked);
+            likeDispatch({ type: "DISLIKE", payload: data });
+          }}
+        />
+      ) : (
+        <BiLike
+          className="playlist_icon"
+          size="30"
+          onClick={() => {
+            setLikedStatus(!liked);
+            likeDispatch({ type: "LIKE", payload: data });
+          }}
+        />
+      )}
     </div>
   );
 }
