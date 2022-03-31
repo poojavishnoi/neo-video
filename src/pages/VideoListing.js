@@ -17,7 +17,7 @@ export function VideoListing() {
   return (
     <div className="explore_main_container">
       {videoList.map((videoItem) => {
-        return <VideoCard data={videoItem} />;
+        return <VideoCard liked={false} data={videoItem} />;
       })}
     </div>
   );
