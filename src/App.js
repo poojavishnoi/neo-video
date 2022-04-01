@@ -1,7 +1,7 @@
 import "./App.css";
 import { Header, Footer } from "./component/";
 import { Route, Routes } from "react-router-dom";
-import { Home, VideoListing, Like} from "./pages/";
+import { Home, VideoListing, Like, WatchLater } from "./pages/";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/videoList" element={<VideoListing />} />
         <Route path="/likedvideos" element={<Like />} />
+        <Route path="/watchlater" element={<WatchLater />} />
       </Routes>
       <Footer />
     </div>

@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import { useLike } from "../context/like-context";
-import { MdWatchLater, BiLike, AiFillLike } from "./";
+import { MdWatchLater, MdOutlineWatchLater, BiLike, AiFillLike } from "./";
 import "../style/videoCard.css";
+import { useWatchLater } from "../context/watchlater-context";
 
-export function VideoCard({ liked,data }) {
+export function VideoCard({ watch, liked, data }) {
   const { likeDispatch } = useLike();
+  const { watchDispatch } = useWatchLater();
   const [likedStatus, setLikedStatus] = useState(liked);
+  const [watchLaterStatus, setWatchLater] = useState(watch);
 
   return (
     <div className="video_card">
@@ -18,7 +21,26 @@ export function VideoCard({ liked,data }) {
       <h3>{data.title}</h3>
       <p>views {data.views}</p>
       <FaPlay className="play_icon" />
-      <MdWatchLater className="watchlater_icon" size="25" />
+
+      {watchLaterStatus ? (
+        <MdWatchLater
+          onClick={() => {
+            setWatchLater(watch);
+            watchDispatch({ type: "REMOVE_FROM_WATCH_LATER", payload: data });
+          }}
+          className="watchlater_icon"
+          size="25"
+        />
+      ) : (
+        <MdOutlineWatchLater
+          onClick={() => {
+            setWatchLater(!watch);
+            watchDispatch({ type: "ADD_TO_WATCH_LATER", payload: data });
+          }}
+          className="watchlater_icon"
+          size="25"
+        />
+      )}
       {likedStatus ? (
         <AiFillLike
           className="playlist_icon"
