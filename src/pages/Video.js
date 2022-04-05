@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useVideo } from "../context/video-context";
 import "../style/video.css";
 import { useParams } from "react-router-dom";

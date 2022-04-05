@@ -1,11 +1,9 @@
 import React from "react";
 import "../style/playlist.css";
-import { useNavigate } from "react-router-dom";
 import { usePlaylist } from "../context/playlist-context";
 import { PlaylistCard } from "../component/";
 
 export function Playlist() {
-  const navigate = useNavigate();
   const { playlists } = usePlaylist();
   console.log(playlists);
 
