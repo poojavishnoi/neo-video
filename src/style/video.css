@@ -1,0 +1,31 @@
+.video_main_container{
+  margin: 0 15%;
+  text-align: left;
+  padding: 2rem;
+}
+
+.video_iframe{
+  width: 90rem;
+  height: 50rem;
+  margin: 1rem;
+}
+
+.video_desc{
+  margin-left: 1rem;
+}
+
+.desc_heading{
+  font-size: 1.3rem;
+  color: var(--grey-color);
+}
+
+.desc {
+  margin-top: 0.5rem;
+  color: var(--grey-color);
+}
+
+.video_btn{
+  margin: 0.5rem 0.5rem 1rem 0rem;
+  cursor: pointer;
+}
+
