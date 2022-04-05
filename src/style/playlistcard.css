@@ -1,0 +1,40 @@
+.playlist_card_container {
+  width: 35%;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--lightgrey);
+}
+
+.img {
+  position: relative;
+}
+
+.playlist_card_img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.add_playlist_icon {
+  top: 0%;
+  padding-top: 25%;
+  right: 0.2%;
+  height: 99%;
+  background-color: var(--black-color);
+  opacity: 0.5;
+  color: var(--white-color);
+  width: 40%;
+  position: absolute;
+}
+
+.dlt_btn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.playlist_card_desc {
+  display: flex;
+  font-size: 1.4rem;
+  padding: 0 2rem 0.5rem;
+  justify-content: space-between;
+}
