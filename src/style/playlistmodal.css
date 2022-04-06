@@ -1,0 +1,61 @@
+.playlist_modal_container{
+  background-color: var(--modal_background);
+  width: 25%;
+  position: absolute;
+  padding: 1rem 1rem;
+  border-radius: 0.4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.playlist_modal_heading{
+  display: flex;
+  padding-bottom: 0.3rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--grey-color) ;
+} 
+
+.modal_close_btn{
+  font-size: 1.3rem;
+  border: none;
+  padding: 0.2rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.modal_input{
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.modal_input input{
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--grey-color);
+  margin-left: 1rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.create_btn{
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 0.4rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.playlist_item{
+  margin-bottom: 0.5rem;
+}
+
+.playlistname_checkbox{
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--grey-color);
+}
+
+
+.playlistname_checkbox span{
+  margin-left: 0.5rem;
+}

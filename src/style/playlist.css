@@ -1,0 +1,11 @@
+.playlist_main_container{
+  margin: 1% 5%;
+}
+
+.create_playlist_btn{
+  position: absolute;
+  left: 50.3%;
+  top: 58%;
+  cursor: pointer;
+  transform: translate(-50.3%, -58%);
+}

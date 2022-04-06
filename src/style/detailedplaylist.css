@@ -1,0 +1,10 @@
+.detailed_playlist_img {
+  width: 20%;
+  padding-right: 1rem;
+}
+
+.detailed_playlist_container {
+  display: flex;
+  margin: 1% 10%;
+  text-align: left;
+}

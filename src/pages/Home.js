@@ -1,28 +1,15 @@
 import React from "react";
 import "../style/home.css";
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SplideSlide, Splide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
 import { VideoCard } from "../component/";
-import { getAcoustic, getIndie, getInstru } from "../utils";
+import { useVideo } from "../context/video-context";
 
 export function Home() {
-  const [acousticList, setAcousticList] = useState([]);
-  const [indieList, setIndieList] = useState([]);
-  const [instruList, setInstruList] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    async function fetchData() {
-      const data = await fetch("/api/videos");
-      const result = await data.json();
-      setAcousticList(getAcoustic(result.videos));
-      setIndieList(getIndie(result.videos));
-      setInstruList(getInstru(result.videos));
-    }
-    fetchData();
-  }, []);
+  const { acousticList, indieList, instruList } = useVideo();
 
   return (
     <div className="home_container">
@@ -41,7 +28,9 @@ export function Home() {
           </h2>
           <button
             className="btn discover_btn primary_solid_btn"
-            onClick={() => navigate("/videolist")}
+            onClick={() => {
+              navigate("/videolist");
+            }}
           >
             Discover Now
           </button>
