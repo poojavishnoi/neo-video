@@ -32,6 +32,13 @@ export const playlistReducer = (state, { type, payload }) => {
             : playlist;
         }),
       };
+
+    case "ADD_HISTORY":
+      return {
+        ...state,
+        history: payload,
+      };
+
     default:
       return state;
   }
