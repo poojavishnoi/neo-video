@@ -8,9 +8,7 @@ import "../style/detailedplaylist.css";
 function DetailedPlaylist() {
   const { playlists, playlistDispatch } = usePlaylist();
   const { playlistId } = useParams();
-  console.log(playlistId);
   let data = playlists.find((item) => item._id === playlistId);
-  console.log(playlists);
   let videoList = data.videos;
 
   return (

@@ -19,7 +19,6 @@ export function PlaylistModal({ video }) {
     playlistTitleDispatch,
   } = usePlaylist();
 
-  console.log(playlists);
   const playlistTitleHandler = (e) => {
     e.preventDefault();
     createPlaylist(playlistTitle, playlistDispatch);
