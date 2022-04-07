@@ -9,6 +9,7 @@ import {
   WatchLater,
   Playlist,
   Video,
+  History
 } from "./pages/";
 import MockMan from "mockman-js";
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/playlist/:playlistId" element={<DetailedPlaylist />} />
         <Route path="/video/:_id" element={<Video />} />
         <Route path="/mockman" element={<MockMan />} />
+        <Route path="/history" element={<History/>} />
       </Routes>
       <Footer />
     </div>

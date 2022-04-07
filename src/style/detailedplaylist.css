@@ -8,3 +8,9 @@
   margin: 1% 10%;
   text-align: left;
 }
+
+.dlt_history_btn{
+  margin-top: 1rem;
+  position: absolute;
+  right: 10%;
+}

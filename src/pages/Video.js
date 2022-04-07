@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useVideo } from "../context/video-context";
 import "../style/video.css";
 import { useParams } from "react-router-dom";
@@ -8,18 +8,27 @@ import { useWatchLater } from "../context/watchlater-context";
 import { PlaylistModal } from "../component";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { addVideoInHistory } from "../utilities";
 
 export function Video() {
   const { videoList } = useVideo();
   const { likeDispatch } = useLike();
   const { watchDispatch } = useWatchLater();
-  const { showModal, setShowModal } = usePlaylist();
+  const { showModal,playlistDispatch, setShowModal } = usePlaylist();
 
   let { _id } = useParams();
   let videoDetails = videoList.find((ele) => ele._id === _id);
+
+  useEffect(() => {
+    addVideoInHistory(videoDetails,playlistDispatch)
+  }, [videoDetails, playlistDispatch])
+
+
   if (!videoDetails) {
     return <Skeleton count={10} />;
   }
+
+  
   return (
     <>
       {showModal && (
